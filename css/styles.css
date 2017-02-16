@@ -1,0 +1,60 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: fantasy; }
+
+#map {
+  height: 150%; }
+
+/*modificado con node sass*/
+.cuadro {
+  color: #982100;
+  text-align: center;
+  border-radius: 6px;
+  border: 1px solid grey;
+  position: absolute;
+  background-image: url(http://cl.ly/TOzj/pizza.jpg);
+  background-position: 49% 78%;
+  /*background: #fff;*/
+  width: 36%;
+  height: 800px;
+  z-index: 10000000;
+  top: 20px;
+  -webkit-box-shadow: 4px 3px 5px 0px #cccccc;
+  -moz-box-shadow: 4px 3px 5px 0px #cccccc;
+  box-shadow: 4px 3px 5px 0px #cccccc;
+  left: 10px; }
+
+#content {
+  background: rgba(245, 245, 245, 0.56); }
+
+#content h1 {
+  color: #982100;
+  font-family: fantasy; }
+
+.btn-group-lg > .btn, .btn-lg {
+  padding: 10px 16px;
+  font-size: 18px;
+  line-height: 1.3333333;
+  border-radius: 6px;
+  letter-spacing: 1.5px; }
+
+.cuadro h1 {
+  background: rgba(245, 245, 245, 0.56); }
+
+.well {
+  background: rgba(245, 245, 245, 0.56); }
+
+.ion-social-usd {
+  color: green; }
+
+.ion-ios-star {
+  color: gold; }
+
+.imagen {
+  width: 300px;
+  height: auto;
+  margin-left: 20px; }
+
+/*# sourceMappingURL=styles.css.map */

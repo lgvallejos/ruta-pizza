@@ -1,0 +1,64 @@
+{
+    "mapa": {
+        "titulo": "Buenos Aires",
+        "contador": 5,
+        "items": [
+            {
+                "id": "1",
+                "position": {
+                    "lat": "-34.6041209",
+                    "lng": "-58.3800874"
+                },
+                "nombre": "Las Cuartetas",
+                "direccion": "Av Corrientes 838, Ciudad Aut\u00f3noma de Buenos Aires",
+                "descripcion": "Las Cuartetas y Pizzer\u00eda Las Cuartetas son Marca Registrada y no posee sucursales.Se aceptan tarjetas de DEBITO: VISA, MAESTRO Y CABAL 24",
+                "valorPlatoMax": "$201",
+                "reputacion": "4 estrellas",
+                "link": "www.lascuartetas.com",
+                "imagen": "lascuartetas-1024x768.jpg"
+            },
+            {
+                "id": "2",
+                "position": {
+                    "lat": "-34.60716192425147",
+                    "lng": "-58.40057373046875"
+                },
+                "nombre": "El palacio de la Pizza",
+                "direccion": "Av Cordoba 5456",
+                "descripcion": "Pizzeria la super nona",
+                "valorPlatoMax": "$250",
+                "reputacion": "4 estrellas",
+                "link": "www.palaciopizza.com.ar",
+                "imagen": "larey.jpg"
+            },
+            {
+                "id": "3",
+                "position": {
+                    "lat": "-34.588874",
+                    "lng": "-58.430868"
+                },
+                "nombre": "Kentucky",
+                "direccion": "Serrano 1550",
+                "descripcion": "Este Local no tiene el servicio de Delivery, se puede llamar al local y retirar el pedido",
+                "valorPlatoMax": "$200",
+                "reputacion": "3 estrellas",
+                "link": "www.pizzeriaskentucky.com",
+                "imagen": "kentuckypalermo5.png"
+            },
+            {
+                "id": "4",
+                "position": {
+                    "lat": "-34.603532",
+                    "lng": "-58.380372"
+                },
+                "nombre": "La Rey",
+                "direccion": "Av. Corrientes 961",
+                "descripcion": "En el coraz\u00f3n de la calle Corrientes, a pasos del Obelisco, se levanta la emblem\u00e1tica y \u00fanica Pizzer\u00eda La Rey con la mejor muzzarella de Buenos Aires. Inolvidable para locales y extranjeros. En sus salones han degustado pizzas los m\u00e1s grandes capo c\u00f3micos de la Argentina como Tato Bores y Alberto Olmedo y las vedettes y estrellas del teatro de revista m\u00e1s reconocidas como Susana Gim\u00e9nez o Moria Cas\u00e1n y N\u00e9lida Lobato.",
+                "valorPlatoMax": "$300",
+                "reputacion": "4 estrellas",
+                "link": "www.granpizzerialarey.com",
+                "imagen": "larey.jpg"
+            }
+        ]
+    }
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>La Ruta de la Pizza | Buenos Aires</title>
+  <link href="favicon.ico" rel="icon" type="image/x-icon" />
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <!-- CDN Boostrap -->
+  <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7-_ujclOOF7-Rj28am_xiblQJUNrTd3c"></script>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+  <script src="js/script.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  
+
+</head>
+<body>
+
+  <div id="map">
+  </div>
+
+  <form class="navbar-form navbar-left" role="search" style="position:absolute;width: 100%;top:0;text-align: right;">
+    <div id="formulario" class="form-group" style="width: 80%; display:none;">
+
+      <input id="buscarv" type="text" class="form-control" placeholder="Buscar por dirección o nombre de pizzería" style="width:80%;">
+      <div class="btn-group" data-toggle="buttons">
+        <label class="btn btn-primary">
+          <input type="radio" name="options" id="option1" autocomplete="off" value="Direccion"> Dirección
+        </label>
+        <label class="btn btn-primary active">
+          <input type="radio" name="options" id="option2" autocomplete="off" value="Nombre" checked> Nombre
+        </label>
+        
+      </div>
+    </div>
+    <div id="buscar" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></div>
+  </form>
+
+
+  <div id="directionsPanel" style="position:absolute;top:20px;border-radius:6px;width:30%;height:100%;background:white;overflow: auto;display: none;text-align: center;z-index:5;"><p id="indicaciones" style="cursor:pointer;margin-top:5px;">Ocultar indicaciones <span class="uparrow glyphicon glyphicon-chevron-up"></span></p></div>
+  
+  <span class="rightarrow glyphicon glyphicon-chevron-right" style="position: absolute;left: 20px;top: 47px;cursor:pointer;display: none;"></span>
+  <span class="flechabajo downarrow glyphicon glyphicon-chevron-down" style="position: absolute;right: 20px;top: 47px;cursor:pointer;display: none;"></span>
+  <div class="cuadro">
+    <div class="titulo">
+      <div><h1>La ruta de la pizza</h1></div>
+      <span style="cursor:pointer;" class="leftarrow glyphicon glyphicon-chevron-left"></span>
+    </div>
+    <div class="col-md-12">
+      <div class="well well-sm">
+        <!--<form id="configform">-->
+        <div class="form-horizontal">
+          <fieldset>
+            <legend class="text-center header">Agregar pizzería</legend>
+            <div class="form-group">
+
+              <div class="col-md-12">
+                <input id="nombre" name="nombre" type="text" placeholder="Nombre" class="form-control borrar">
+                <div id="nombreError" class="msjError" ></div>
+              </div>
+            </div>
+            <div class="form-group">
+
+              <div class="col-md-12">
+                <input id="direccion" name="direccion" type="text" placeholder="Direccion" class="form-control borrar">
+                <div id="nombreError" class="msjError" ></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+
+              <div class="col-md-12">
+                <input id="latitud" name="latitud" type="text" placeholder="Latitud" class="form-control borrar">
+                <div id="latitudError" class="msjError" ></div>
+              </div>
+            </div>
+            <div class="form-group">
+
+              <div class="col-md-12">
+                <input id="longitud" name="longitud" type="text" placeholder="Longitud" class="form-control borrar">
+                <div id="apellidoError" class="msjError" ></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+
+              <div class="col-md-12">
+                Selección de imagen
+                <input id="foto" name="foto" type="file" placeholder="Foto" class="form-control borrar">
+                <div id="emailError" class="msjError" ></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+
+              <div class="col-md-12">
+                <input id="valor" name="valor" type="text" placeholder="Valor promedio" class="form-control borrar">
+                <div id="edadError" class="msjError" ></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+
+              <div class="col-md-12">
+                <input id="reputacion" name="reputacion" type="text" placeholder="Reputación" class="form-control borrar">
+                <div id="telefonoError" class="msjError" ></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+
+              <div class="col-md-12">
+                <input id="link" name="link" type="text" placeholder="Web" class="form-control borrar">
+                <div id="telefonoError" class="msjError" ></div>
+              </div>
+            </div>
+
+            <div class="form-group">
+
+              <div class="col-md-12">
+                <textarea class="form-control borrar" id="descripcion" name="descripcion" placeholder="Descripción" rows="7"></textarea>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="col-md-12 text-center">
+                <button id="enviardata" class="btn btn-primary btn-lg" onClick="validar()">Enviar</button>
+                <button id="editardata" class="btn btn-primary btn-lg" onClick="editardata()" style="display:none;">Editar</button>
+              </div>
+              
+            </div>
+            <!--</form>-->
+          </fieldset>
+
+
+        </div>
+      </div>
+    </div>
+    
+
+  </div>
+</body>
+</html>

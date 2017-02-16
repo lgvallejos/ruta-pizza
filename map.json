@@ -1,0 +1,29 @@
+{"mapa": {
+    "titulo": "Buenos Aires",
+    "items": [
+      {
+        "id": "0",
+        "position": {
+          "lat": "-34.6041209",
+          "lng": "-58.3800874"
+        },
+        "nombre": "Las Cuartetas",
+        "direccion": "Av Corrientes 838, Ciudad Autónoma de Buenos Aires",
+        "descripcion": "Las Cuartetas y Pizzería Las Cuartetas son Marca Registrada y no posee sucursales.Se aceptan tarjetas de DEBITO: VISA, MAESTRO Y CABAL 24",
+        "valorPlatoMax": "$201",
+        "reputacion": "5 estrellas",
+        "link": "www.lascuartetas.com",
+        "imagen": "lascuartetas-1024x768.jpg"
+      },
+      {
+        "id": "1",
+        "position": {
+          "lat": "-34.60716192425147",
+          "lng": "-58.40057373046875"
+        },
+        "nombre": "El palacio de la Pizza",
+        "direccion": "Av Cordova 5456",
+        "descripcion": "Pizzeria la super nona"
+      }
+    ]
+}}
