@@ -217,7 +217,7 @@ function infoBox(map,marker,data,direc,nombr) {
         $.ajax
         ({
           type: "POST",
-          dataType : 'application/json',
+          dataType : 'json',
           url: 'https://calm-hollows-29056.herokuapp.com/api/pizzerias',
           data: eventsholded,
           success: function () {alert("Thanks!"); },
